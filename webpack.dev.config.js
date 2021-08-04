@@ -13,6 +13,20 @@ module.exports = {
         port: 3000,
         open: true
     },
+    module: {
+        rules: [
+            {
+                test: /\.m?js$/,
+                exclude: /(node_modules|bower_components)/,
+                use: {
+                    loader: 'babel-loader',
+                    options: {
+                        presets: ['@babel/preset-env']
+                    }
+                }
+            }
+        ]
+    },
     plugins: [
         new HtmlWebpackPlugin({
             template: "./public/index.html",
