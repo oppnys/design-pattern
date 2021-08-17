@@ -15,3 +15,5 @@ studentButton.innerHTML = 'Student button'
 studentButton.type = 'button'
 studentButton.onclick = student.study.bind(student)
 document.body.append(studentButton)
+
+student.getWeight()

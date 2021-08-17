@@ -1,4 +1,5 @@
 export default class People {
+    #weight = '70Kg'
     constructor(name, age) {
         this.name = name
         this.age = age
@@ -7,6 +8,10 @@ export default class People {
 
     eat() {
         console.log(`${this.name} eat something`)
+    }
+
+    getWeight() {
+        console.log(`${this.name} is ${this.#weight}`)
     }
 
     speak() {
