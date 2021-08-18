@@ -1,6 +1,8 @@
 export default class People {
-    #weight = '70Kg'
-    constructor(name, age) {
+    name: String
+    age: Number
+    private weight = '70Kg'
+    constructor(name:String, age:Number) {
         this.name = name
         this.age = age
         console.log('People constructor', this.name)
@@ -11,7 +13,7 @@ export default class People {
     }
 
     getWeight() {
-        console.log(`${this.name} is ${this.#weight}`)
+        console.log(`${this.name} is ${this.weight}`)
     }
 
     speak() {

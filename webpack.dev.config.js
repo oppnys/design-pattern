@@ -3,7 +3,7 @@ const path = require('path')
 
 module.exports = {
     mode: "development",
-    entry: './src/index.js',
+    entry: './src/index.ts',
     output: {
         path: __dirname,
         filename: './release/bundle.js'
