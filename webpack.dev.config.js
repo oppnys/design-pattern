@@ -16,6 +16,11 @@ module.exports = {
     module: {
         rules: [
             {
+                test: /\.ts$/,
+                exclude: /node_modules/,
+                use: ['ts-loader']
+            },
+            {
                 test: /\.m?js$/,
                 exclude: /(node_modules|bower_components)/,
                 use: {
@@ -26,6 +31,9 @@ module.exports = {
                 }
             }
         ]
+    },
+    resolve: {
+        extensions:['.js','.ts']
     },
     plugins: [
         new HtmlWebpackPlugin({
