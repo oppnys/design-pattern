@@ -29,6 +29,7 @@ console.log(decorator)
 decorator.draw()
 
 console.log(`===========装饰器===========`)
+
 @sealed
 class Greeter {
     greeting: string;
@@ -37,8 +38,10 @@ class Greeter {
         this.greeting = message;
     }
 
-    greet() {
-        return "Hello, " + this.greeting;
+    @readonly @log
+    greet(hi: String) {
+        console.log(this.greeting)
+        return `Hello, ${hi} ` + this.greeting;
     }
 }
 
@@ -48,5 +51,20 @@ function sealed(constructor: Function) {
     Object.seal(constructor.prototype);
 }
 
-const greet = new Greeter('hi')
-console.log(greet.greet())
+function readonly(target: any, key: String, decorator: PropertyDescriptor): PropertyDescriptor {
+    decorator.writable = false
+    return decorator
+}
+
+function log(target: any, key: String, decorator: PropertyDescriptor): PropertyDescriptor {
+    const oldValue = decorator.value
+    decorator.value = function () {
+        console.log(`print method name ${key}, arguments:`, Array.from(arguments))
+        return oldValue.apply(target, arguments)
+    }
+    return decorator
+}
+
+const g = new Greeter('hee')
+console.log(g.greet('hi'))
+

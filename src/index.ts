@@ -5,4 +5,6 @@
 // import './model/Single'
 // import './model/Single2'
 // import './model/Adapter'
-import './model/Decorator'
+// import './model/Decorator'
+// import './model/Proxy'
+import './model/Observer'
