@@ -1,7 +1,7 @@
 export class Product {
-    name: String
+    name: string
 
-    constructor(name: String) {
+    constructor(name: string) {
         this.name = name
     }
 
@@ -16,7 +16,7 @@ export class Product {
 }
 
 export class Creator {
-    create(name: String) {
+    create(name: string) {
         return new Product(name)
     }
 }

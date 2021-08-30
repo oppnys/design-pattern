@@ -1,9 +1,9 @@
 class Observer {
-    name: String
+    name: string
     subject: Subject
     callback: Function
 
-    constructor(name: String, subject: Subject, callback: Function) {
+    constructor(name: string, subject: Subject, callback: Function) {
         this.name = name
         this.subject = subject
         this.callback = callback
@@ -16,7 +16,7 @@ class Observer {
 }
 
 class Subject {
-    state: Number
+    state: number
     observers: Array<Observer>
 
     constructor() {
@@ -24,11 +24,11 @@ class Subject {
         this.observers = []
     }
 
-    getState(): Number {
+    getState(): number {
         return this.state
     }
 
-    setState(state: Number) {
+    setState(state: number) {
         this.state = state
         this.notifyAllObserver()
     }

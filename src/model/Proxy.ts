@@ -3,9 +3,9 @@ interface BaseImage {
 }
 
 class RealImage implements BaseImage {
-    fileName: String
+    fileName: string
 
-    constructor(fileName: String) {
+    constructor(fileName: string) {
         this.fileName = fileName
         this.loadFromDisk()
     }
@@ -20,10 +20,10 @@ class RealImage implements BaseImage {
 }
 
 class ProxyImage implements BaseImage {
-    fileName: String
+    fileName: string
     private realImage: RealImage
 
-    constructor(fileName: String) {
+    constructor(fileName: string) {
         this.fileName = fileName
         this.realImage = new RealImage(this.fileName)
     }

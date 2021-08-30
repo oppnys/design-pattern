@@ -1,6 +1,6 @@
 interface Info {
-    code?: String
-    inTime?: Date | Number
+    code?: string
+    inTime?: Date | number
     place?: Place
 }
 
@@ -108,9 +108,9 @@ export class Screen {
 
 //车
 export class Car {
-    code: String
+    code: string
 
-    constructor(code: String) {
+    constructor(code: string) {
         this.code = code
     }
 }

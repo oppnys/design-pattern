@@ -1,8 +1,8 @@
 export default class People {
-    name: String
-    age: Number
+    name: string
+    age: number
     private weight = '70Kg'
-    constructor(name:String, age:Number) {
+    constructor(name:string, age:number) {
         this.name = name
         this.age = age
         console.log('People constructor', this.name)

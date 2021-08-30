@@ -51,12 +51,12 @@ function sealed(constructor: Function) {
     Object.seal(constructor.prototype);
 }
 
-function readonly(target: any, key: String, decorator: PropertyDescriptor): PropertyDescriptor {
+function readonly(target: any, key: string, decorator: PropertyDescriptor): PropertyDescriptor {
     decorator.writable = false
     return decorator
 }
 
-function log(target: any, key: String, decorator: PropertyDescriptor): PropertyDescriptor {
+function log(target: any, key: string, decorator: PropertyDescriptor): PropertyDescriptor {
     const oldValue = decorator.value
     decorator.value = function () {
         console.log(`print method name ${key}, arguments:`, Array.from(arguments))

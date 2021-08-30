@@ -2,8 +2,8 @@ import People from "./People";
 
 
 export default class Student extends People {
-    number: Number
-    constructor(name: String, age: Number, number: Number) {
+    number: number
+    constructor(name: string, age: number, number: number) {
         super(name, age)
         this.number = number
         console.log('Student constructor')

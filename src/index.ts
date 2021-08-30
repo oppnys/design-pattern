@@ -7,4 +7,7 @@
 // import './model/Adapter'
 // import './model/Decorator'
 // import './model/Proxy'
-import './model/Observer'
+// import './model/Observer'
+// import './model/State'
+// import './model/UserPromise'
+import './model/Memento'
