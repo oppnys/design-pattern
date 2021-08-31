@@ -10,4 +10,7 @@
 // import './model/Observer'
 // import './model/State'
 // import './model/UserPromise'
-import './model/Memento'
+// import './model/Memento'
+import App from "./ShoppingCart/App";
+
+new App('app')
