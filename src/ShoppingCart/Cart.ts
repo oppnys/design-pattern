@@ -28,7 +28,6 @@ export default class Cart {
             }
             return true
         })
-        console.log(this.goodsList)
     }
 
     getList(): string {
